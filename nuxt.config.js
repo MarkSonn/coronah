@@ -45,13 +45,31 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/firebase'
   ],
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+  },
+
+  firebase: {
+    config: {
+      apiKey: 'AIzaSyCUbfuXloCWhlOUaa6vv7DAJ6e8mrxXTHY',
+      authDomain: 'coro-nah.firebaseapp.com',
+      databaseURL: 'https://coro-nah.firebaseio.com',
+      projectId: 'coro-nah',
+      storageBucket: 'coro-nah.appspot.com',
+      messagingSenderId: '1017579186403',
+      appId: '1:1017579186403:web:792bcb471fb69834edbdd6',
+      measurementId: 'G-8ZZ24NVMRR'
+    },
+    onFirebaseHosting: true,
+    services: {
+      firestore: true
+    }
   },
   /*
   ** vuetify module configuration
@@ -63,7 +81,7 @@ export default {
       dark: true,
       themes: {
         dark: {
-          primary: colors.blue.darken2,
+          primary: colors.pink.darken3,
           accent: colors.grey.darken3,
           secondary: colors.amber.darken3,
           info: colors.teal.lighten1,
